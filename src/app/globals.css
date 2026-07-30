@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
 :root {
+  --mist: #e4ebf0;
+  --mist-deep: #d0dce6;
+  --foam: #ffedf2;
+  --ink: #3b0622;
+  --ink-soft: #5c3d4a;
+  --lagoon: #1a6b6b;
+  --lagoon-deep: #134f4f;
+  --sand: #c8b9a6;
+  --plum: #540830;
+  --pink: #f7bbcc;
+  --pink-soft: #ffedf2;
+  --gold: #e49300;
+  --gold-deep: #c97f00;
+  --nav-text: #ffedf2;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-mist: var(--mist);
+  --color-mist-deep: var(--mist-deep);
+  --color-foam: var(--foam);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-lagoon: var(--lagoon);
+  --color-lagoon-deep: var(--lagoon-deep);
+  --color-sand: var(--sand);
+  --color-plum: var(--plum);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-nav-text: var(--nav-text);
+  --font-sans: var(--font-montserrat);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
+  --font-label: var(--font-lexend);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pink) 45%, white);
+  color: var(--plum);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-drift {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.04) translate(-1.5%, 1%);
+  }
+}
+
+@keyframes reveal-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.34s both;
+}
+
+.animate-soft-drift {
+  animation: soft-drift 22s ease-in-out infinite;
+}
+
+.animate-reveal-line {
+  transform-origin: left;
+  animation: reveal-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .animate-soft-drift,
+  .animate-reveal-line {
+    animation: none;
+  }
 }
