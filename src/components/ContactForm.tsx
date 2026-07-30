@@ -78,7 +78,7 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="rounded-[4px] bg-gold px-6 py-3.5 font-label text-xs font-normal uppercase tracking-[0.6px] text-[#2a0418] transition-colors hover:bg-gold-deep"
+        className="rounded-[4px] bg-gold px-6 py-3.5 font-label text-xs font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
       >
         Request a Free Discovery Call
       </button>

@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import PicturePlaceholder from "@/components/PicturePlaceholder";
+import HeroPattern from "@/components/HeroPattern";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 const pillars = [
@@ -27,12 +28,12 @@ const testimonials = [
   {
     quote:
       "I walked into mediation feeling prepared for the first time. She helped me understand what I actually wanted — and how to ask for it.",
-    attribution: "Client, Durham, NC",
+    attribution: "Client, Arlington, VA",
   },
   {
     quote:
       "I used to leave every attorney meeting confused. Alecia helped me get organized and advocate for myself.",
-    attribution: "Client, Raleigh, NC",
+    attribution: "Client, Richmond, VA",
   },
   {
     quote:
@@ -48,23 +49,31 @@ export default function Home() {
         className="relative overflow-hidden md:flex md:h-[calc(100dvh-5.9rem)] md:items-center"
         style={katePinkBg}
       >
+        <HeroPattern />
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-6 py-12 md:grid-cols-2 md:gap-12 md:px-10 md:py-8 lg:gap-16">
           <div className="flex justify-center md:justify-start">
             <div
-              className="relative overflow-hidden rounded-[2rem] bg-white/40 shadow-[0_20px_50px_-28px_rgba(74,14,46,0.35)]"
+              className="relative overflow-hidden rounded-[2rem] bg-white/40 shadow-[0_20px_50px_-28px_rgba(15,92,99,0.35)]"
               style={{
                 height: "min(34rem, calc(100dvh - 10rem))",
                 aspectRatio: "2 / 3",
                 maxWidth: "100%",
               }}
             >
-              <PicturePlaceholder className="absolute inset-0 h-full w-full bg-white/50" />
+              <Image
+                src="/alecia-headshot.jpg"
+                alt="Alecia Pazant, Certified Divorce Coach"
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 80vw, 36vw"
+              />
             </div>
           </div>
 
           <div className="min-w-0">
             <p className="font-display text-2xl font-normal tracking-tight text-plum md:text-3xl">
-              Insightful Divorce Coaching
+              Insightful Divorce Coaching™
             </p>
             <p className="mt-2 font-body text-sm font-medium tracking-wide text-plum md:text-base">
               Structured. Steady. Forward.
@@ -84,7 +93,7 @@ export default function Home() {
             <div className="mt-7 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="rounded-[4px] bg-gold px-6 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-[#2a0418] transition-colors hover:bg-gold-deep"
+                className="rounded-[4px] bg-gold px-6 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
               >
                 Request a Free Discovery Call
               </Link>
@@ -102,7 +111,7 @@ export default function Home() {
       <section className="border-y border-pink/40 bg-white py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-10 lg:max-w-5xl">
           <h2 className="font-display text-3xl font-normal tracking-tight text-plum md:text-4xl">
-            I&apos;m Alecia P. Hall
+            I&apos;m Alecia Pazant
           </h2>
           <p className="mt-4 font-body text-sm font-light leading-relaxed text-ink md:mt-5 md:text-base">
             I&apos;m a{" "}
@@ -136,8 +145,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-14" style={katePinkBg}>
-        <div className="mx-auto max-w-[75rem] px-6 md:px-[5rem]">
+      <section className="relative overflow-hidden py-12 md:py-14" style={katePinkBg}>
+        <HeroPattern />
+        <div className="relative mx-auto max-w-[75rem] px-6 md:px-[5rem]">
           <h2 className="text-center font-display text-[2.1rem] font-normal tracking-tight text-plum md:text-[2.65rem]">
             How I Help You Through
           </h2>
@@ -155,7 +165,7 @@ export default function Home() {
                 </p>
                 <Link
                   href={item.href}
-                  className="mt-6 inline-flex items-center justify-center rounded-[4px] bg-gold px-5 py-3 font-label text-xs font-normal uppercase tracking-[0.6px] text-[#2a0418] transition-colors hover:bg-gold-deep"
+                  className="mt-6 inline-flex items-center justify-center rounded-[4px] bg-gold px-5 py-3 font-label text-xs font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
                 >
                   {item.cta}
                 </Link>
@@ -199,7 +209,7 @@ export default function Home() {
           <div className="mt-8 md:mt-10">
             <Link
               href="/contact"
-              className="inline-flex rounded-[4px] bg-gold px-8 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-[#2a0418] transition-colors hover:bg-gold-deep"
+              className="inline-flex rounded-[4px] bg-gold px-8 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
             >
               Request a Free Discovery Call
             </Link>

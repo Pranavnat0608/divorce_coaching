@@ -8,14 +8,14 @@ export default function Footer() {
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
           <Image
             src="/insightful-logo.png"
-            alt="Insightful Divorce Coaching"
+            alt="Insightful Divorce Coaching™"
             width={88}
             height={88}
             className="h-[4.5rem] w-[4.5rem] rounded-md bg-white object-contain"
           />
           <div>
             <p className="font-display text-2xl font-normal">
-              Insightful Divorce Coaching
+              Insightful Divorce Coaching™
             </p>
             <p className="mt-2 font-label text-sm font-normal uppercase tracking-[0.6px] text-nav-text/70">
               Structured. Steady. Forward.
@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="border-t border-nav-text/15 px-6 py-5 text-center font-body text-xs font-light leading-relaxed text-nav-text/55 md:px-[5rem] md:text-left">
         <div className="mx-auto max-w-[75rem] space-y-2">
           <p>
-            © {new Date().getFullYear()} Insightful Divorce Coaching. All rights
+            © {new Date().getFullYear()} Insightful Divorce Coaching™. All rights
             reserved.
           </p>
           <p>

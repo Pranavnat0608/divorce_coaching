@@ -30,8 +30,8 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   title: {
-    default: "Insightful Divorce Coaching",
-    template: "%s · Insightful Divorce Coaching",
+    default: "Insightful Divorce Coaching™",
+    template: "%s · Insightful Divorce Coaching™",
   },
   description:
     "Certified Divorce Coach® offering structured decision support, mediation readiness, and attorney prep. Structured. Steady. Forward.",

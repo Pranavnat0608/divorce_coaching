@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import HeroPattern from "@/components/HeroPattern";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a free discovery call with Insightful Divorce Coaching.",
+    "Request a free discovery call with Insightful Divorce Coaching™.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden" style={katePinkBg}>
-        <div className="mx-auto max-w-[75rem] px-6 py-[4.5rem] text-center md:px-[5rem] md:py-[7.5rem]">
+        <HeroPattern />
+        <div className="relative mx-auto max-w-[75rem] px-6 py-[4.5rem] text-center md:px-[5rem] md:py-[7.5rem]">
           <p className="font-label text-[1rem] font-normal uppercase tracking-[0.6px] text-plum">
             Contact
           </p>
@@ -33,8 +35,15 @@ export default function ContactPage() {
               Request a Free Discovery Call
             </h2>
             <p className="mt-4 max-w-md font-body text-[1.05rem] font-light leading-[1.6] text-ink md:text-[1.1rem]">
-              Share a little about where you are in the process and I&apos;ll be
-              in touch to schedule your discovery call.
+              For general inquiries, please use the contact form. For
+              time-sensitive matters, you may call{" "}
+              <a
+                href="tel:+17036891124"
+                className="font-medium text-plum underline-offset-2 hover:underline"
+              >
+                (703) 689-1124
+              </a>
+              . I respond within 24 hours.
             </p>
             <dl className="mt-10 space-y-5 text-sm">
               <div>
@@ -43,6 +52,19 @@ export default function ContactPage() {
                 </dt>
                 <dd className="mt-1 font-body font-light text-ink">
                   Serving clients virtually
+                </dd>
+              </div>
+              <div>
+                <dt className="font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
+                  Phone
+                </dt>
+                <dd className="mt-1 font-body font-light text-ink">
+                  <a
+                    href="tel:+17036891124"
+                    className="transition-colors hover:text-plum"
+                  >
+                    (703) 689-1124
+                  </a>
                 </dd>
               </div>
               <div>

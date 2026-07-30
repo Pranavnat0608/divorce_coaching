@@ -10,7 +10,7 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-const navLinkStyle = { color: "#ffedf2" as const };
+const navLinkStyle = { color: "#e8f4f8" as const };
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function Header() {
             className="max-w-[10rem] font-display text-base font-normal leading-tight tracking-tight sm:max-w-none sm:text-lg md:text-[1.35rem]"
             style={navLinkStyle}
           >
-            Insightful Divorce Coaching
+            Insightful Divorce Coaching™
           </span>
         </Link>
 

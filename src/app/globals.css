@@ -3,18 +3,21 @@
 :root {
   --mist: #e4ebf0;
   --mist-deep: #d0dce6;
-  --foam: #ffedf2;
-  --ink: #3b0622;
-  --ink-soft: #5c3d4a;
+  --foam: #e8f4f8;
+  --ink: #12343a;
+  --ink-soft: #3d5f66;
   --lagoon: #1a6b6b;
   --lagoon-deep: #134f4f;
   --sand: #c8b9a6;
-  --plum: #540830;
-  --pink: #f7bbcc;
-  --pink-soft: #ffedf2;
-  --gold: #e49300;
-  --gold-deep: #c97f00;
-  --nav-text: #ffedf2;
+  /* Brand: deep teal (kept as --plum for existing class names) */
+  --plum: #0f5c63;
+  /* Brand: light blue surfaces (kept as --pink for existing class names) */
+  --pink: #c8e0ea;
+  --pink-soft: #e4f1f6;
+  --gold: #1a7a7a;
+  --gold-deep: #156666;
+  --nav-text: #e8f4f8;
+  --cta-text: #ffffff;
   --background: #ffffff;
   --foreground: var(--ink);
 }
@@ -36,6 +39,7 @@
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-nav-text: var(--nav-text);
+  --color-cta-text: var(--cta-text);
   --font-sans: var(--font-montserrat);
   --font-display: var(--font-playfair);
   --font-body: var(--font-dm-sans);
@@ -61,7 +65,7 @@ h4 {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--pink) 45%, white);
+  background: color-mix(in srgb, var(--pink) 55%, white);
   color: var(--plum);
 }
 

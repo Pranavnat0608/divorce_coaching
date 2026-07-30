@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PicturePlaceholder from "@/components/PicturePlaceholder";
+import HeroPattern from "@/components/HeroPattern";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Discovery Session, Decision Readiness Package, and Ongoing Coaching Support with Insightful Divorce Coaching.",
+    "Discovery Session, Decision Readiness Package, and Ongoing Coaching Support with Insightful Divorce Coaching™.",
 };
 
 const offerings = [
@@ -17,6 +18,8 @@ const offerings = [
       "A single focused session to map where you are, what you're facing, and what clarity would look like for you. No commitment required.",
     cta: "Book a Discovery Session",
     href: "/contact",
+    image: "/service-1.jpg",
+    imageAlt: "Woman in a focused coaching conversation",
     imageLeft: true,
   },
   {
@@ -26,6 +29,8 @@ const offerings = [
       "A structured series of sessions that moves you through governance mapping, mediation prep, and attorney engagement preparation — step by step.",
     cta: "Explore This Package",
     href: "/contact",
+    image: "/service-2.jpg",
+    imageAlt: "Parent reviewing thoughtful planning materials",
     imageLeft: false,
   },
   {
@@ -35,6 +40,8 @@ const offerings = [
       "Continued partnership as your divorce progresses — helping you stay clear-headed and grounded through each new phase, conversation, and decision point.",
     cta: "Ask About Ongoing Support",
     href: "/contact",
+    image: "/service-3.jpg",
+    imageAlt: "Organized tools and resources for divorce planning",
     imageLeft: true,
   },
 ];
@@ -43,11 +50,12 @@ export default function ServicesPage() {
   return (
     <>
       <section className="relative overflow-hidden" style={katePinkBg}>
-        <div className="mx-auto max-w-[75rem] px-6 py-[4.5rem] text-center md:px-[5rem] md:py-[7.5rem]">
+        <HeroPattern />
+        <div className="relative mx-auto max-w-[75rem] px-6 py-10 text-center md:px-[5rem] md:py-12">
           <p className="font-label text-[1rem] font-normal uppercase tracking-[0.6px] text-plum">
             Services
           </p>
-          <h1 className="mx-auto mt-3 max-w-[75rem] font-display text-[2.1rem] font-normal leading-[1.2] tracking-normal text-plum md:text-[3.6rem] md:leading-[1.2]">
+          <h1 className="mx-auto mt-3 max-w-[75rem] font-display text-[1.85rem] font-normal leading-[1.2] tracking-normal text-plum md:text-[2.75rem] md:leading-[1.2]">
             You&apos;ve decided — or you&apos;re close. Now you need structure
             for what comes next.
           </h1>
@@ -59,9 +67,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-[4.5rem] md:px-[5rem] md:pb-[5rem] md:pt-[7.5rem]">
+      <section className="bg-white px-6 pb-14 pt-10 md:px-[5rem] md:pb-[5rem] md:pt-12">
         <div className="mx-auto max-w-[75rem]">
-          <h2 className="mx-auto max-w-[62.5rem] text-center font-display text-[2.1rem] font-normal leading-[1.2] text-plum md:text-[3.6rem] md:leading-[1.2]">
+          <h2 className="mx-auto max-w-[62.5rem] text-center font-display text-[1.85rem] font-normal leading-[1.2] text-plum md:text-[2.75rem] md:leading-[1.2]">
             Choose the type of support that fits what you need right now:
           </h2>
 
@@ -77,7 +85,13 @@ export default function ServicesPage() {
                       item.imageLeft ? "md:order-1" : "md:order-2"
                     }`}
                   >
-                    <PicturePlaceholder className="absolute inset-0 h-full w-full bg-pink/60 text-plum" />
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
                   <div
                     className={`flex flex-col justify-center px-8 py-10 text-center md:gap-3 md:px-20 md:py-20 ${
@@ -96,7 +110,7 @@ export default function ServicesPage() {
                     <div className="mt-5 md:mt-3">
                       <Link
                         href={item.href}
-                        className="inline-flex rounded-[4px] bg-gold px-5 py-2.5 font-label text-base font-normal uppercase tracking-[0.6px] text-[#2a0418] transition-colors hover:bg-gold-deep"
+                        className="inline-flex rounded-[4px] bg-gold px-5 py-2.5 font-label text-base font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
                       >
                         {item.cta}
                       </Link>
@@ -113,8 +127,11 @@ export default function ServicesPage() {
         className="relative overflow-hidden py-14 md:py-16"
         style={katePinkBg}
       >
+        <HeroPattern />
         <div className="relative mx-auto max-w-3xl px-6 text-center md:px-10">
-          <p className="font-display font-normal text-4xl leading-none text-plum">&ldquo;</p>
+          <p className="font-display font-normal text-4xl leading-none text-plum">
+            &ldquo;
+          </p>
           <h2 className="mt-1 font-display text-xl font-normal tracking-tight text-plum md:text-3xl">
             Thank goodness for structured support.
           </h2>
@@ -124,7 +141,7 @@ export default function ServicesPage() {
             it.&rdquo;
           </p>
           <p className="mt-5 font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
-            — Client, Durham, NC
+            — Client, Arlington, VA
           </p>
         </div>
       </section>
