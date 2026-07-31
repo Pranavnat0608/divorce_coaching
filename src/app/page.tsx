@@ -46,16 +46,16 @@ export default function Home() {
   return (
     <>
       <section
-        className="relative overflow-hidden md:flex md:h-[calc(100dvh-5.9rem)] md:items-center"
+        className="relative overflow-x-hidden md:flex md:min-h-[calc(100dvh-5.9rem)] md:items-center"
         style={katePinkBg}
       >
         <HeroPattern />
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-6 py-12 md:grid-cols-2 md:gap-12 md:px-10 md:py-8 lg:gap-16">
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-6 py-12 md:grid-cols-2 md:gap-12 md:px-10 md:py-10 lg:gap-16">
           <div className="flex justify-center md:justify-start">
             <div
               className="relative overflow-hidden rounded-[2rem] bg-white/40 shadow-[0_20px_50px_-28px_rgba(15,92,99,0.35)]"
               style={{
-                height: "min(34rem, calc(100dvh - 10rem))",
+                height: "min(34rem, calc(100dvh - 14rem))",
                 aspectRatio: "2 / 3",
                 maxWidth: "100%",
               }}

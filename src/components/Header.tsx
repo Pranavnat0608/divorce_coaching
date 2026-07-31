@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
@@ -38,7 +39,7 @@ export default function Header() {
             />
           </span>
           <span
-            className="max-w-[10rem] font-display text-base font-normal leading-tight tracking-tight sm:max-w-none sm:text-lg md:text-[1.35rem]"
+            className="min-w-0 font-display text-[0.95rem] font-normal leading-snug tracking-tight sm:text-lg md:text-[1.35rem]"
             style={navLinkStyle}
           >
             Insightful Divorce Coaching™
