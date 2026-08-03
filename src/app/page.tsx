@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
 import { katePinkBg } from "@/lib/katePinkBg";
@@ -46,65 +45,47 @@ export default function Home() {
   return (
     <>
       <section
-        className="relative overflow-x-hidden md:flex md:min-h-[calc(100dvh-5.9rem)] md:items-center"
+        className="home-hero relative flex h-[calc(100svh-4.5rem)] flex-col justify-center overflow-hidden md:h-[calc(100dvh-5.9rem)]"
         style={katePinkBg}
       >
         <HeroPattern />
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-8 px-6 py-12 md:grid-cols-2 md:gap-12 md:px-10 md:py-10 lg:gap-16">
-          <div className="flex justify-center md:justify-start">
-            <div
-              className="relative overflow-hidden rounded-[2rem] bg-white/40 shadow-[0_20px_50px_-28px_rgba(15,92,99,0.35)]"
-              style={{
-                height: "min(34rem, calc(100dvh - 14rem))",
-                aspectRatio: "2 / 3",
-                maxWidth: "100%",
-              }}
+        <div className="relative mx-auto flex w-full max-w-[75rem] flex-col items-center px-6 text-center md:px-[5rem]">
+          <p className="home-hero__brand animate-fade-up font-display font-normal leading-[1.08] tracking-tight text-plum">
+            Insightful Divorce Coaching™
+          </p>
+          <p className="home-hero__tag animate-fade-up-delay font-body font-medium tracking-[0.04em] text-plum">
+            Structured. Steady. Forward.
+          </p>
+          <div
+            aria-hidden
+            className="home-hero__rule animate-reveal-line mx-auto h-px bg-plum/35"
+          />
+          <h1 className="home-hero__headline animate-fade-up-delay mx-auto max-w-4xl font-display font-normal leading-[1.15] tracking-tight text-plum">
+            Navigate Your Divorce with Structure, Clarity, and Confidence.
+          </h1>
+          <p className="home-hero__body animate-fade-up-delay-2 mx-auto max-w-2xl font-body font-light leading-relaxed text-ink">
+            I help you understand your options, prepare for every conversation
+            — with your attorney, your mediator, and yourself — so you can make
+            decisions you&apos;ll stand behind.
+          </p>
+          <div className="home-hero__actions animate-fade-up-delay-2 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            <Link
+              href="/contact"
+              className="rounded-[4px] bg-gold px-6 py-3 font-label text-xs font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep md:px-7 md:py-3.5 md:text-sm"
             >
-              <Image
-                src="/alecia-headshot.jpg"
-                alt="Alecia Pazant, Certified Divorce Coach"
-                fill
-                priority
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 80vw, 36vw"
-              />
-            </div>
+              Request a Free Discovery Call
+            </Link>
+            <Link
+              href="/services"
+              className="border border-plum/25 px-6 py-3 font-body text-sm font-medium text-plum transition-colors hover:border-plum/45 hover:bg-plum/5 md:px-7 md:py-3.5"
+            >
+              View services
+            </Link>
           </div>
-
-          <div className="min-w-0">
-            <p className="font-display text-2xl font-normal tracking-tight text-plum md:text-3xl">
-              Insightful Divorce Coaching™
-            </p>
-            <p className="mt-2 font-body text-sm font-medium tracking-wide text-plum md:text-base">
-              Structured. Steady. Forward.
-            </p>
-            <h1 className="mt-4 font-display text-3xl font-normal leading-[1.12] tracking-tight text-plum md:text-4xl lg:text-[2.75rem]">
-              Navigate Your Divorce with Structure, Clarity, and Confidence.
-            </h1>
-            <p className="mt-4 max-w-xl font-body text-base font-light leading-relaxed text-ink md:text-lg">
-              I help you understand your options, prepare for every conversation
-              — with your attorney, your mediator, and yourself — so you can make
-              decisions you&apos;ll stand behind.
-            </p>
-            <p className="mt-4 font-label text-xs font-normal uppercase leading-relaxed tracking-[0.6px] text-plum/80 md:text-sm">
-              Certified Divorce Coach® · Structured Decision Support · Mediation
-              Readiness
-            </p>
-            <div className="mt-7 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-[4px] bg-gold px-6 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
-              >
-                Request a Free Discovery Call
-              </Link>
-              <Link
-                href="/services"
-                className="border border-plum/25 px-6 py-3.5 font-body text-sm font-medium text-plum transition-colors hover:border-plum/45 hover:bg-plum/5"
-              >
-                View services
-              </Link>
-            </div>
-          </div>
+          <p className="home-hero__creds animate-fade-up-delay-2 max-w-lg font-label font-normal uppercase leading-relaxed tracking-[0.6px] text-plum/75">
+            Certified Divorce Coach® · Structured Decision Support · Mediation
+            Readiness
+          </p>
         </div>
       </section>
 

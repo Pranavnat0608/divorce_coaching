@@ -120,6 +120,50 @@ h4 {
   animation: reveal-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 }
 
+/* Home hero: scale type/spacing to the hero height, stay inside one screen */
+.home-hero {
+  container-type: size;
+  --hero-space: clamp(0.55rem, 3.1cqh, 1.55rem);
+  --hero-brand: clamp(2.05rem, 11.5cqh, 4.35rem);
+  --hero-tag: clamp(0.95rem, 3.2cqh, 1.25rem);
+  --hero-head: clamp(1.45rem, 7.4cqh, 2.95rem);
+  --hero-body: clamp(1.05rem, 3.5cqh, 1.3rem);
+  --hero-cred: clamp(0.65rem, 1.9cqh, 0.8rem);
+}
+
+.home-hero__brand {
+  font-size: var(--hero-brand);
+}
+
+.home-hero__tag {
+  margin-top: var(--hero-space);
+  font-size: var(--hero-tag);
+}
+
+.home-hero__rule {
+  margin-top: calc(var(--hero-space) * 1.35);
+  width: clamp(3.5rem, 12cqh, 8rem);
+}
+
+.home-hero__headline {
+  margin-top: calc(var(--hero-space) * 1.35);
+  font-size: var(--hero-head);
+}
+
+.home-hero__body {
+  margin-top: calc(var(--hero-space) * 1.1);
+  font-size: var(--hero-body);
+}
+
+.home-hero__actions {
+  margin-top: calc(var(--hero-space) * 1.6);
+}
+
+.home-hero__creds {
+  margin-top: calc(var(--hero-space) * 1.5);
+  font-size: var(--hero-cred);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
   .animate-fade-up-delay,
