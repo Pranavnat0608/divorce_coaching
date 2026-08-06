@@ -22,13 +22,13 @@ export default function Header() {
         <Link
           href="/"
           scroll
-          className="flex items-center gap-3"
+          className="flex min-w-0 flex-1 items-center gap-2.5 sm:gap-3"
           onClick={() => {
             setOpen(false);
             window.scrollTo({ top: 0, left: 0, behavior: "auto" });
           }}
         >
-          <span className="relative block h-12 w-12 shrink-0 overflow-hidden rounded-md bg-white p-0.5">
+          <span className="relative block h-11 w-11 shrink-0 overflow-hidden rounded-md bg-white p-0.5 sm:h-12 sm:w-12">
             <Image
               src="/insightful-logo.png"
               alt=""
@@ -39,7 +39,7 @@ export default function Header() {
             />
           </span>
           <span
-            className="min-w-0 font-display text-[0.95rem] font-normal leading-snug tracking-tight sm:text-lg md:text-[1.35rem]"
+            className="min-w-0 font-display text-[0.9rem] font-normal leading-snug tracking-tight sm:text-lg md:text-[1.35rem]"
             style={navLinkStyle}
           >
             Insightful Divorce Coaching™

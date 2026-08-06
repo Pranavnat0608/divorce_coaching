@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="home-hero relative flex h-[calc(100svh-4.5rem)] flex-col justify-center overflow-hidden md:h-[calc(100dvh-5.9rem)]"
+        className="home-hero relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-center overflow-x-hidden py-10 md:h-[calc(100dvh-5.9rem)] md:min-h-0 md:overflow-hidden md:py-0"
         style={katePinkBg}
       >
         <HeroPattern />

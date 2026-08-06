@@ -131,6 +131,23 @@ h4 {
   --hero-cred: clamp(0.65rem, 1.9cqh, 0.8rem);
 }
 
+/* Mobile: avoid fixed-height clipping under the sticky header */
+@media (max-width: 767px) {
+  .home-hero {
+    container-type: normal;
+    --hero-space: 0.55rem;
+    --hero-brand: clamp(1.85rem, 8vw, 2.35rem);
+    --hero-tag: 0.95rem;
+    --hero-head: clamp(1.3rem, 5.5vw, 1.7rem);
+    --hero-body: 1rem;
+    --hero-cred: 0.65rem;
+  }
+
+  .home-hero__rule {
+    width: 3.5rem;
+  }
+}
+
 .home-hero__brand {
   font-size: var(--hero-brand);
 }

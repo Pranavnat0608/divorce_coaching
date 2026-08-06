@@ -46,7 +46,7 @@ export default function AboutPage() {
     <>
       {/* About hero */}
       <section
-        className="relative flex min-h-[62svh] items-center overflow-hidden md:min-h-[68svh]"
+        className="relative flex min-h-[62svh] items-center overflow-x-hidden py-10 md:min-h-[68svh] md:py-12"
         style={katePinkBg}
       >
         <HeroPattern />
