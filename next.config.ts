@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -9,6 +11,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Helps GitHub Pages resolve nested routes without a server
+  trailingSlash: true,
 };
 
 export default nextConfig;

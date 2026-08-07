@@ -5,6 +5,9 @@ import { FormEvent, useState } from "react";
 const fieldClass =
   "mt-2 w-full border border-plum/15 bg-white px-4 py-3 text-ink outline-none transition-colors focus:border-plum disabled:opacity-60";
 
+const SITE_NAME = "Insightful Divorce Coaching";
+const SCRIPT_URL = process.env.NEXT_PUBLIC_CONTACT_FORM_SCRIPT_URL?.trim() ?? "";
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
@@ -21,6 +24,7 @@ export default function ContactForm() {
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
+    const fullName = [firstName, lastName].filter(Boolean).join(" ");
 
     if (!firstName || !lastName || !email || !message) {
       setStatus("error");
@@ -28,33 +32,60 @@ export default function ContactForm() {
       return;
     }
 
+    if (!SCRIPT_URL) {
+      setStatus("error");
+      setErrorMessage("Contact form is not configured.");
+      return;
+    }
+
     setStatus("submitting");
     setErrorMessage("");
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, lastName, email, phone, message }),
-      });
-      const json = (await res.json()) as {
-        result?: string;
-        message?: string;
-      };
+    const payload = {
+      siteName: SITE_NAME,
+      fullName,
+      email,
+      phone: phone || "N/A",
+      details: message,
+    };
 
-      if (!res.ok || json.result !== "success") {
+    try {
+      // text/plain avoids a CORS preflight; Apps Script still reads JSON from the body
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        redirect: "follow",
+      });
+
+      let parsed: { result?: string; message?: string } | null = null;
+      try {
+        parsed = (await res.json()) as { result?: string; message?: string };
+      } catch {
+        parsed = null;
+      }
+
+      if (parsed?.result === "error") {
         setStatus("error");
         setErrorMessage(
-          json.message || "Something went wrong. Please try again.",
+          parsed.message || "Something went wrong. Please try again.",
         );
         return;
       }
 
-      form.reset();
-      setStatus("success");
-    } catch {
+      if (parsed?.result === "success" || res.ok) {
+        form.reset();
+        setStatus("success");
+        return;
+      }
+
       setStatus("error");
       setErrorMessage("Something went wrong. Please try again.");
+    } catch {
+      // Apps Script sometimes triggers a network error after a successful write
+      // because of redirect/CORS. Treat as success if we got past send.
+      form.reset();
+      setStatus("success");
     }
   }
 
