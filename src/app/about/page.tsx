@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
+import { assetPath } from "@/lib/assetPath";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 export const metadata: Metadata = {
@@ -53,7 +54,7 @@ export default function AboutPage() {
         <div className="relative mx-auto grid w-full max-w-[75rem] items-center gap-8 px-6 py-10 md:grid-cols-2 md:gap-12 md:px-[5rem] md:py-12 lg:gap-14">
           <div className="relative mx-auto aspect-square w-full max-w-[18rem] overflow-hidden rounded-[2rem] sm:max-w-[20rem] md:mx-0 md:max-w-[22rem] lg:max-w-[24rem]">
             <Image
-              src="/about-hero-v3.jpg"
+              src={assetPath("/about-hero-v3.jpg")}
               alt="Calm shoreline at dusk"
               fill
               priority
@@ -101,7 +102,7 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 flex justify-center">
             <Image
-              src="/cdc-logo.jpg"
+              src={assetPath("/cdc-logo.jpg")}
               alt="CDC Certified Divorce Coach® — The Professional Standard for Personal Divorce Coaching®"
               width={220}
               height={122}
@@ -190,7 +191,7 @@ export default function AboutPage() {
         <div className="flex items-center justify-center bg-pink px-6 py-10 md:px-10 md:py-16">
           <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem]">
             <Image
-              src="/alecia-headshot.jpg"
+              src={assetPath("/alecia-headshot.jpg")}
               alt="Alecia Pazant"
               fill
               className="object-cover object-top"
@@ -209,7 +210,7 @@ export default function AboutPage() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-14 md:grid-cols-[0.9fr_1.1fr] md:gap-14 md:px-10 md:py-16">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2rem] md:mx-0 md:max-w-none">
             <Image
-              src="/about-value.jpg"
+              src={assetPath("/about-value.jpg")}
               alt="Organized planning and clear next steps"
               fill
               className="object-cover"

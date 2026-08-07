@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[75rem] flex-col gap-10 px-6 py-12 md:flex-row md:items-end md:justify-between md:px-[5rem]">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
           <Image
-            src="/insightful-logo.png"
+            src={assetPath("/insightful-logo.png")}
             alt="Insightful Divorce Coaching™"
             width={88}
             height={88}
@@ -28,7 +29,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-start gap-6 md:items-end">
           <Image
-            src="/cdc-logo.jpg"
+            src={assetPath("/cdc-logo.jpg")}
             alt="CDC Certified Divorce Coach® — The Professional Standard for Personal Divorce Coaching®"
             width={180}
             height={100}

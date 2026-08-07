@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
+import { assetPath } from "@/lib/assetPath";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 export const metadata: Metadata = {
@@ -117,7 +118,7 @@ export default function ServicesPage() {
                   }`}
                 >
                   <Image
-                    src={item.image}
+                    src={assetPath(item.image)}
                     alt={item.imageAlt}
                     fill
                     className="object-cover"

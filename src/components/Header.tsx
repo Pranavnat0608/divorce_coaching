@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { assetPath } from "@/lib/assetPath";
 
 const links = [
   { href: "/", label: "Home" },
@@ -30,7 +31,7 @@ export default function Header() {
         >
           <span className="relative block h-11 w-11 shrink-0 overflow-hidden rounded-md bg-white p-0.5 sm:h-12 sm:w-12">
             <Image
-              src="/insightful-logo.png"
+              src={assetPath("/insightful-logo.png")}
               alt=""
               width={88}
               height={88}
