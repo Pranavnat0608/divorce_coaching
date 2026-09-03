@@ -6,7 +6,7 @@ import { katePinkBg } from "@/lib/katePinkBg";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a free discovery call with Insightful Divorce Coaching™.",
+    "Request a discovery session with Insightful Divorce Coaching™.",
 };
 
 export default function ContactPage() {
@@ -32,7 +32,7 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-[75rem] gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-[5rem]">
           <div>
             <h2 className="font-display text-[2rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
-              Request a Free Discovery Call
+              Request a Discovery Session
             </h2>
             <p className="mt-4 max-w-md font-body text-[1.05rem] font-light leading-[1.6] text-ink md:text-[1.1rem]">
               For general inquiries, please use the contact form. For

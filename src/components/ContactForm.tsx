@@ -200,7 +200,7 @@ export default function ContactForm() {
       >
         {status === "submitting"
           ? "Sending…"
-          : "Request a Free Discovery Call"}
+          : "Request a Discovery Session"}
       </button>
     </form>
   );

@@ -73,7 +73,7 @@ export default function Home() {
               href="/contact"
               className="rounded-[4px] bg-gold px-6 py-3 font-label text-xs font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep md:px-7 md:py-3.5 md:text-sm"
             >
-              Request a Free Discovery Call
+              Request a Discovery Session
             </Link>
             <Link
               href="/services"
@@ -85,6 +85,37 @@ export default function Home() {
           <p className="home-hero__creds animate-fade-up-delay-2 max-w-lg font-label font-normal uppercase leading-relaxed tracking-[0.6px] text-plum/75">
             Certified Divorce Coach® · Structured Decision Support · Mediation
             Readiness
+          </p>
+        </div>
+      </section>
+
+      <section className="border-y border-pink/40 bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-4xl px-6 text-center md:px-10 lg:max-w-5xl">
+          <h2 className="font-display text-3xl font-normal tracking-tight text-plum md:text-4xl">
+            What Divorce Coaching Is
+          </h2>
+          <p className="mt-5 font-body text-sm font-light leading-relaxed text-ink md:text-base">
+            According to the American Bar Association&apos;s Dispute Resolution
+            Overview, divorce coaching is recognized as one of the formal
+            processes designed to help people navigate conflict and transition.
+          </p>
+          <blockquote className="mx-auto mt-6 max-w-3xl border-l-2 border-plum/30 pl-6 text-left font-body text-sm font-light italic leading-relaxed text-ink md:text-base">
+            The ABA describes divorce coaching as &ldquo;a flexible,
+            goal&#8209;oriented process designed to support, motivate, and guide
+            people going through divorce to help them make the best possible
+            decisions for their future, based on their particular interests,
+            needs, and concerns.&rdquo;
+          </blockquote>
+          <p className="mt-6 font-body text-sm font-light text-ink md:text-base">
+            Source:{" "}
+            <a
+              href="https://www.americanbar.org/groups/dispute_resolution/resources/overview/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-plum underline-offset-2 hover:underline"
+            >
+              American Bar Association — Dispute Resolution Overview
+            </a>
           </p>
         </div>
       </section>
@@ -192,7 +223,7 @@ export default function Home() {
               href="/contact"
               className="inline-flex rounded-[4px] bg-gold px-8 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
             >
-              Request a Free Discovery Call
+              Request a Discovery Session
             </Link>
           </div>
         </div>
