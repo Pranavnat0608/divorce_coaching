@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s · Insightful Divorce Coaching™",
   },
   description:
-    "Certified Divorce Coach® offering structured decision support, mediation readiness, and attorney prep. Structured. Steady. Forward.",
+    "Certified Divorce Coach® offering executive-caliber, trauma-informed decision support for clients and the attorneys who represent them. Structured. Steady. Attorney-Aligned.",
 };
 
 export default function RootLayout({

@@ -1,115 +1,145 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
-import { assetPath } from "@/lib/assetPath";
 import { katePinkBg } from "@/lib/katePinkBg";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing",
+  title: "Services",
   description:
-    "Discovery Session, Decision Readiness Package, Ongoing Coaching Support, and optional add-ons with Insightful Divorce Coaching™.",
+    "Executive-caliber, trauma-informed decision support: legal-process clarity, mediation readiness, attorney engagement preparation, conflict de-escalation, and transition stability.",
 };
 
-const offerings = [
+const legalProcessSupport = [
+  "stay grounded during conflict",
+  "prepare effectively for mediation",
+  "communicate with structure",
+  "make decisions aligned with long-term goals",
+  "use attorney time efficiently",
+];
+
+const services = [
   {
-    name: "Discovery Session",
-    tagline: "A gentle, grounded beginning.",
-    price: "$200",
-    paymentNote:
-      "Payment is collected at the time of scheduling to reserve your session.",
-    description:
-      "Your Discovery Session is a safe, supportive space to pause, breathe, and get clear. We talk through what's happening, what decisions may be ahead, and what kind of support will help you feel more steady and prepared.",
-    included: [
-      "Initial decision-pathway mapping to help you see your next steps",
-      "Space to name what feels overwhelming or unclear",
-      "Emotional steadiness and grounding",
-      "A simple explanation of mediation vs. attorney pathways",
-      "Clear recommendations for what to do next",
-      "Optional follow-up summary email so you don't have to remember everything",
+    name: "Legal-Process Clarity & Pathway Selection",
+    paragraphs: [
+      "Clients often struggle to understand their divorce process options — mediation, collaborative divorce, or litigation. Without clarity, decisions become reactive and costly.",
+      "This service provides a structured, calm environment to evaluate options, understand implications, and choose the path aligned with long-term goals.",
     ],
-    closing:
-      "This session helps you feel less alone, more organized, and more ready to move forward.",
-    cta: "Schedule a Discovery Session",
-    href: "/contact",
-    image: "/service-1.jpg",
-    imageAlt: "Woman in a focused coaching conversation",
-    imageLeft: true,
+    listLabel: "You will receive:",
+    items: [
+      "a clear breakdown of legal-process options",
+      "structured decision-support tools",
+      "alignment with attorney strategy",
+      "preparation for next-step conversations",
+    ],
   },
   {
-    name: "Decision Readiness Package",
-    tagline: "Support that helps you feel prepared, steady, and clear.",
-    price: "$995",
-    paymentNote:
-      "Payment is collected upfront at the time of scheduling.",
-    description:
-      "This package is designed to help you feel emotionally steady and practically prepared for the conversations that shape your divorce — mediation, attorney meetings, financial discussions, and major decisions. You'll gain structure, confidence, and a sense of control during a time that often feels unpredictable.",
-    included: [
-      "Four 60-minute sessions",
-      "Governance-forward decision pathways that bring clarity to complex choices",
-      "Mediation readiness so you feel calm and prepared walking into the room",
-      "Attorney engagement preparation to help you communicate clearly and confidently",
-      "Communication planning that reduces anxiety and increases clarity",
-      "Gentle guidance for organizing documents and information",
-      "Emotional steadiness woven throughout every session",
-      "Light email support between sessions",
-      "A personalized Decision Readiness Plan you can rely on",
+    name: "Mediation Readiness",
+    paragraphs: [
+      "Mediation is most effective when clients arrive prepared, steady, and clear about priorities. Unprepared clients escalate conflict, lose focus, and increase legal costs.",
     ],
-    closing:
-      "Most clients begin here and then continue with ongoing support as decisions evolve.",
-    cta: "Begin the Decision Readiness Package",
-    href: "/contact",
-    image: "/service-2.jpg",
-    imageAlt: "Parent reviewing thoughtful planning materials",
-    imageLeft: false,
+    listLabel: "This service strengthens mediation outcomes by helping clients:",
+    items: [
+      "clarify goals and non-negotiables",
+      "anticipate difficult conversations",
+      "practice grounded communication",
+      "reduce emotional reactivity",
+      "enter mediation with a structured plan",
+    ],
   },
   {
-    name: "Ongoing Coaching Support",
-    tagline: "Steady, compassionate support as your divorce unfolds.",
-    price: "$995/month",
-    paymentNote:
-      "Monthly payment is collected at the time of scheduling to reserve your session times.",
-    description:
-      "Divorce is not a single moment — it's a process. Ongoing Coaching Support gives you a consistent place to land, breathe, and think clearly as new decisions arise. This is ideal for clients who want continued emotional steadiness and structured guidance throughout the journey.",
-    included: [
-      "Two 60-minute sessions per month",
-      "Supportive email check-ins between sessions",
-      "Light document review when you need help organizing or preparing",
-      "Updated decision pathways as circumstances change",
-      "Communication planning for mediation or attorney meetings",
-      "Emotional grounding and reassurance",
-      "Priority scheduling",
+    name: "Attorney Engagement Preparation",
+    paragraphs: [
+      "Attorney time is expensive — and often underutilized when clients arrive overwhelmed or unfocused. This service ensures clients are prepared to use legal time effectively.",
+    ],
+    listLabel: "Clients receive support to:",
+    items: [
+      "organize documents and timelines",
+      "clarify questions before meetings",
+      "articulate goals and concerns",
+      "understand how to communicate constructively",
+      "stay aligned with attorney guidance",
     ],
     closing:
-      "Most clients transition into Ongoing Coaching Support after completing the Decision Readiness Package, ensuring they remain supported, steady, and clear throughout the process.",
-    cta: "Start Ongoing Coaching Support",
-    href: "/contact",
-    image: "/service-3.jpg",
-    imageAlt: "Organized tools and resources for divorce planning",
-    imageLeft: true,
+      "This reduces back-and-forth, improves efficiency, and strengthens legal strategy.",
+  },
+  {
+    name: "Conflict De-Escalation & Communication Structure",
+    paragraphs: [
+      "High-conflict communication derails progress and increases emotional strain. This service helps clients communicate with clarity and steadiness during difficult moments.",
+    ],
+    listLabel: "Clients learn how to:",
+    items: [
+      "identify emotional triggers",
+      "pause and respond rather than react",
+      "use structured communication techniques",
+      "reduce escalation during co-parenting or legal discussions",
+      "maintain focus during high-stress moments",
+    ],
+  },
+  {
+    name: "Transition Stability & Post-Divorce Adjustment",
+    paragraphs: [
+      "Major transitions — household changes, co-parenting shifts, new routines — can overwhelm even the most capable individuals. This service provides grounded support during and after the divorce process.",
+    ],
+    listLabel: "Clients receive guidance to:",
+    items: [
+      "establish stable routines",
+      "support children through transitions",
+      "maintain emotional steadiness",
+      "build communication patterns that reduce conflict",
+      "move forward with clarity and confidence",
+    ],
   },
 ];
 
-const addOns = [
+const feeAlignment = [
+  "the legal-process path you are pursuing (mediation, collaborative divorce, or litigation)",
+  "the level of preparation required for attorney meetings",
+  "the communication and conflict-management support needed",
+  "the stability and transition planning appropriate for your situation",
+  "the attorney strategy guiding your case",
+];
+
+const whyDiscoverySession = [
+  "clarify your goals and priorities",
+  "understand the attorney strategy guiding your case",
+  "assess the level of conflict or complexity",
+  "determine the appropriate coaching structure",
+  "ensure alignment with your legal-process path",
+  "provide a fee recommendation that reflects your actual needs",
+];
+
+const regions = [
   {
-    name: "Emergency Clarity Call",
-    price: "$150",
-    description:
-      "A focused 45-minute session designed to help you stabilize quickly during unexpected developments. This call provides immediate grounding and support so you can respond thoughtfully rather than react from stress.",
-    details:
-      "Emergency Clarity Calls are scheduled during regular business hours and are typically available within 24–48 hours. This service is booked in advance and is not a 24/7 on-call offering. Payment is collected at the time of scheduling.",
-    cta: "Request an Emergency Clarity Call",
+    name: "Northern Virginia",
+    label: "Primary Market",
+    body: "Supporting clients in Loudoun, Fairfax, Arlington, Alexandria, and Prince William — where high-stakes cases and attorney-driven processes benefit from structured decision support.",
   },
   {
-    name: "Document Review",
-    price: "$95",
-    description:
-      "Support reviewing communication drafts, co-parenting messages, mediation preparation materials, or other written documents related to your divorce process. This service helps you communicate clearly, calmly, and effectively — especially in situations where tone and wording matter.",
-    details:
-      "Document Review includes one round of feedback on documents up to 500 words. Turnaround time is typically 2–3 business days. This service focuses on tone, clarity, and communication strategy and does not include legal review or multiple revisions. Payment is collected at the time of submission.",
-    cta: "Request Document Review",
+    name: "Beaufort, South Carolina",
+    label: "Secondary Market",
+    body: "Providing trauma-informed stability and heritage-aligned support for families navigating transition, including military families.",
   },
 ];
+
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <ul className="mt-3 space-y-2.5">
+      {items.map((point) => (
+        <li
+          key={point}
+          className="flex gap-3 font-body text-[0.95rem] font-light leading-relaxed text-ink md:text-[1rem]"
+        >
+          <span
+            aria-hidden
+            className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum/55"
+          />
+          <span>{point}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function ServicesPage() {
   return (
@@ -118,126 +148,172 @@ export default function ServicesPage() {
         <HeroPattern />
         <div className="relative mx-auto max-w-[75rem] px-6 py-10 text-center md:px-[5rem] md:py-12">
           <p className="font-label text-[1rem] font-normal uppercase tracking-[0.6px] text-plum">
-            Services &amp; Pricing
+            Services
           </p>
           <h1 className="mx-auto mt-3 max-w-[75rem] font-display text-[1.85rem] font-normal leading-[1.2] tracking-normal text-plum md:text-[2.75rem] md:leading-[1.2]">
-            You don&apos;t have to navigate this alone.
+            Structured. Steady. Attorney-Aligned.
           </h1>
           <p className="mx-auto mt-3 max-w-[48rem] font-body text-[1.05rem] font-light leading-[1.6] text-ink md:text-[1.1rem] md:leading-[1.75]">
-            Divorce can feel overwhelming, disorienting, and heavy. My role is
-            to bring calm, clarity, and steady support so you can move through
-            this transition with confidence and emotional grounding.
+            Executive-caliber, trauma-informed decision support that
+            strengthens client readiness, reduces conflict, and improves legal
+            outcomes.
+          </p>
+          <p className="mx-auto mt-3 max-w-[48rem] font-body text-[0.95rem] font-light leading-[1.6] text-ink-soft md:text-[1rem]">
+            Serving clients virtually across the U.S., with focused support in
+            Northern Virginia and the Beaufort, SC region.
           </p>
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-14 pt-10 md:px-[5rem] md:pb-[5rem] md:pt-12">
-        <div className="mx-auto max-w-[75rem] space-y-8 md:space-y-10">
-          {offerings.map((item) => (
-            <article
-              key={item.name}
-              className="overflow-hidden rounded-[2.5rem] bg-pink-soft md:rounded-[5rem]"
-            >
-              <div className="grid md:grid-cols-2">
-                <div
-                  className={`relative min-h-[14rem] md:min-h-[28rem] ${
-                    item.imageLeft ? "md:order-1" : "md:order-2"
-                  }`}
-                >
-                  <Image
-                    src={assetPath(item.image)}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div
-                  className={`flex flex-col justify-center px-8 py-10 md:px-12 md:py-14 lg:px-16 ${
-                    item.imageLeft ? "md:order-2" : "md:order-1"
-                  }`}
-                >
-                  <h2 className="font-display text-[1.85rem] font-normal leading-[1.15] text-plum md:text-[2.5rem]">
-                    {item.name}
-                  </h2>
-                  <p className="mt-2 font-body text-[1.05rem] font-medium leading-snug text-plum md:text-[1.15rem]">
-                    {item.tagline}
-                  </p>
-                  <p className="mt-3 font-label text-sm font-normal uppercase tracking-[0.6px] text-gold md:text-base">
-                    {item.price}
-                  </p>
-                  <p className="mt-2 font-body text-[0.95rem] font-light leading-relaxed text-ink-soft md:text-[1rem]">
-                    {item.paymentNote}
-                  </p>
-                  <p className="mt-4 font-body text-[1rem] font-light leading-[1.65] text-ink md:text-[1.05rem]">
-                    {item.description}
-                  </p>
-                  <p className="mt-5 font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
-                    What&apos;s Included
-                  </p>
-                  <ul className="mt-3 space-y-2.5">
-                    {item.included.map((point) => (
-                      <li
-                        key={point}
-                        className="flex gap-3 font-body text-[0.95rem] font-light leading-relaxed text-ink md:text-[1rem]"
+      <section className="bg-white px-6 py-14 md:px-[5rem] md:py-16">
+        <div className="mx-auto max-w-3xl md:max-w-4xl">
+          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
+            How These Services Support the Legal Process
+          </h2>
+          <p className="mt-5 text-center font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            Divorce is a high-stakes process that requires clarity, emotional
+            steadiness, and informed decision-making. My services are designed
+            to strengthen the entire professional team — especially attorneys —
+            by helping clients:
+          </p>
+          <div className="mx-auto mt-6 max-w-xl">
+            <BulletList items={legalProcessSupport} />
+          </div>
+          <p className="mt-8 text-center font-display text-lg font-normal tracking-tight text-plum md:text-xl">
+            This is not therapy, legal advice, or mediation. It is
+            executive-caliber decision support that improves legal outcomes.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 pb-14 md:px-[5rem] md:pb-[5rem]">
+        <div className="mx-auto max-w-[75rem]">
+          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.65rem]">
+            Core Services
+          </h2>
+          <div className="mt-10 space-y-8 md:space-y-10">
+            {services.map((item, index) => (
+              <article
+                key={item.name}
+                className="rounded-[2.5rem] bg-pink-soft px-8 py-10 md:rounded-[4rem] md:px-14 md:py-14 lg:px-16"
+              >
+                <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+                  <div>
+                    <p className="font-label text-sm font-normal uppercase tracking-[0.6px] text-gold md:text-base">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-2 font-display text-[1.6rem] font-normal leading-[1.15] text-plum md:text-[2.1rem]">
+                      {item.name}
+                    </h3>
+                    {item.paragraphs.map((paragraph) => (
+                      <p
+                        key={paragraph}
+                        className="mt-4 font-body text-[1rem] font-light leading-[1.65] text-ink md:text-[1.05rem]"
                       >
-                        <span
-                          aria-hidden
-                          className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-plum/55"
-                        />
-                        <span>{point}</span>
-                      </li>
+                        {paragraph}
+                      </p>
                     ))}
-                  </ul>
-                  <p className="mt-5 font-body text-[1rem] font-light leading-[1.65] text-ink md:text-[1.05rem]">
-                    {item.closing}
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href={item.href}
-                      className="inline-flex rounded-[4px] bg-gold px-5 py-2.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep md:text-base"
-                    >
-                      {item.cta}
-                    </Link>
+                  </div>
+                  <div className="md:pt-9">
+                    <p className="font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
+                      {item.listLabel}
+                    </p>
+                    <BulletList items={item.items} />
+                    {item.closing && (
+                      <p className="mt-5 font-body text-[1rem] font-medium leading-[1.65] text-plum md:text-[1.05rem]">
+                        {item.closing}
+                      </p>
+                    )}
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-14 md:py-16" style={katePinkBg}>
+        <HeroPattern />
+        <div className="relative mx-auto max-w-3xl px-6 md:max-w-4xl md:px-10">
+          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
+            Professional Fees
+          </h2>
+          <p className="mt-5 font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            Insightful Divorce Coaching™ provides structured, trauma-informed,
+            executive-caliber decision support tailored to the needs of each
+            client and the complexity of their case. Because every divorce
+            involves different legal-process paths, levels of conflict, and
+            attorney-driven requirements, fees are discussed during the
+            Discovery Session once your specific needs are understood.
+          </p>
+          <div className="mt-8 rounded-[2rem] bg-white px-8 py-8 md:px-10">
+            <p className="font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
+              This approach ensures that your coaching plan is aligned with:
+            </p>
+            <BulletList items={feeAlignment} />
+          </div>
+          <p className="mt-8 font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            Fees are not listed publicly to maintain professional discretion,
+            support attorney-aligned collaboration, and ensure that each client
+            receives a plan that reflects the actual demands of their case.
+          </p>
+          <p className="mt-4 font-body text-[1.05rem] font-medium leading-[1.7] text-plum md:text-[1.1rem]">
+            <Link
+              href="/contact"
+              className="underline underline-offset-4 hover:text-gold-deep"
+            >
+              Request a Discovery Session
+            </Link>{" "}
+            to receive a tailored recommendation and fee structure based on your
+            goals, your legal process, and the level of support required.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-14 md:px-[5rem] md:py-16">
+        <div className="mx-auto max-w-3xl md:max-w-4xl">
+          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
+            Why Fees Are Discussed During the Discovery Session
+          </h2>
+          <p className="mt-5 text-center font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            Clients benefit from a private, structured conversation before fees
+            are presented because it allows us to:
+          </p>
+          <div className="mx-auto mt-6 max-w-xl">
+            <BulletList items={whyDiscoverySession} />
+          </div>
+          <p className="mt-8 text-center font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            This is the standard approach used by executive-caliber
+            professional services firms and is fully aligned with the
+            expectations of attorneys who refer clients to this practice.
+          </p>
         </div>
       </section>
 
       <section className="bg-white px-6 pb-14 md:px-[5rem] md:pb-16">
-        <div className="mx-auto max-w-[75rem]">
-          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.65rem]">
-            Optional Add&#8209;On Services
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
+            Regional Focus
           </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-center font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
+            While services are delivered virtually nationwide, this practice is
+            intentionally focused on:
+          </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
-            {addOns.map((item) => (
+            {regions.map((region) => (
               <article
-                key={item.name}
-                className="flex flex-col rounded-[2rem] bg-pink-soft px-8 py-10 md:rounded-[3rem] md:px-10 md:py-12"
+                key={region.name}
+                className="rounded-[2rem] bg-pink-soft px-8 py-10 text-center md:rounded-[3rem] md:px-10"
               >
                 <h3 className="font-display text-[1.5rem] font-normal leading-snug text-plum md:text-[1.85rem]">
-                  {item.name}
+                  {region.name}
                 </h3>
-                <p className="mt-2 font-label text-sm font-normal uppercase tracking-[0.6px] text-gold md:text-base">
-                  {item.price}
+                <p className="mt-1 font-label text-xs font-normal uppercase tracking-[0.6px] text-gold md:text-sm">
+                  {region.label}
                 </p>
-                <p className="mt-4 flex-1 font-body text-[1rem] font-light leading-[1.65] text-ink">
-                  {item.description}
+                <p className="mt-4 font-body text-[1rem] font-light leading-[1.65] text-ink">
+                  {region.body}
                 </p>
-                <p className="mt-4 font-body text-[0.95rem] font-light leading-relaxed text-ink-soft">
-                  {item.details}
-                </p>
-                <div className="mt-6">
-                  <Link
-                    href="/contact"
-                    className="inline-flex rounded-[4px] bg-gold px-5 py-2.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
-                  >
-                    {item.cta}
-                  </Link>
-                </div>
               </article>
             ))}
           </div>
@@ -248,36 +324,21 @@ export default function ServicesPage() {
         <HeroPattern />
         <div className="relative mx-auto max-w-3xl px-6 text-center md:px-10">
           <h2 className="font-display text-[1.85rem] font-normal tracking-tight text-plum md:text-[2.5rem]">
-            Payment &amp; Scheduling
+            Ready to Move Forward with Clarity?
           </h2>
           <p className="mt-5 font-body text-[1.05rem] font-light leading-[1.7] text-ink md:text-[1.1rem]">
-            Payment for all services is collected upfront at the time of
-            scheduling. This helps create a clear, steady structure for our work
-            together and ensures your session time is reserved just for you.
+            If you are navigating divorce and want structured, trauma-informed
+            support that strengthens your legal process, I invite you to begin
+            with a Discovery Session.
           </p>
-        </div>
-      </section>
-
-      <section
-        className="relative overflow-hidden py-14 md:py-16"
-        style={katePinkBg}
-      >
-        <HeroPattern />
-        <div className="relative mx-auto max-w-3xl px-6 text-center md:px-10">
-          <p className="font-display font-normal text-4xl leading-none text-plum">
-            &ldquo;
-          </p>
-          <h2 className="mt-1 font-display text-xl font-normal tracking-tight text-plum md:text-3xl">
-            Thank goodness for structured support.
-          </h2>
-          <p className="mt-4 font-body text-[1.05rem] font-light leading-[1.6] text-ink md:text-[1.1rem]">
-            &ldquo;I walked into mediation feeling prepared for the first time.
-            She helped me understand what I actually wanted — and how to ask for
-            it.&rdquo;
-          </p>
-          <p className="mt-5 font-label text-xs font-normal uppercase tracking-[0.6px] text-plum">
-            — Client, Arlington, VA
-          </p>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="inline-flex rounded-[4px] bg-gold px-6 py-3.5 font-label text-sm font-normal uppercase tracking-[0.6px] text-white transition-colors hover:bg-gold-deep"
+            >
+              Request a Discovery Session
+            </Link>
+          </div>
         </div>
       </section>
     </>
