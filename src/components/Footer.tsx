@@ -19,10 +19,10 @@ export default function Footer() {
               Insightful Divorce Coaching™
             </p>
             <p className="mt-2 font-label text-sm font-normal uppercase tracking-[0.6px] text-nav-text/70">
-              Structured. Steady. Forward.
+              Structured. Steady. Attorney-Aligned.
             </p>
             <p className="mt-3 max-w-sm font-body text-sm font-light leading-relaxed text-nav-text/70">
-              Certified Divorce Coach® · Serving clients virtually
+              Certified Divorce Coach® · Serving clients virtually across the U.S., with focused support in Northern Virginia and Beaufort, SC
             </p>
           </div>
         </div>
