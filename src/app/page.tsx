@@ -25,23 +25,23 @@ const regions = [
 
 const services = [
   {
-    title: "Legal-Process Clarity & Pathway Selection",
-    body: "Helping clients understand their divorce process options — mediation, collaborative divorce, or litigation — and choose the path aligned with their long-term goals.",
-  },
-  {
-    title: "Mediation Readiness",
-    body: "Preparing clients to enter mediation with clarity, emotional steadiness, and a structured plan.",
+    title: "Divorce Decision Readiness & Legal-Process Preparation",
+    body: "Helping clients clarify priorities, evaluate considerations, and prepare for informed conversations with legal counsel regarding mediation, collaborative divorce, litigation, and other dispute-resolution approaches.",
   },
   {
     title: "Attorney Engagement Preparation",
     body: "Organizing documents, clarifying questions, and strengthening communication so attorney time is used effectively.",
   },
   {
+    title: "Mediation Readiness",
+    body: "Preparing clients to enter mediation with clarity, emotional steadiness, and a structured plan.",
+  },
+  {
     title: "Conflict De-Escalation & Communication Structure",
     body: "Reducing reactivity and strengthening constructive communication during high-stress moments.",
   },
   {
-    title: "Transition Stability & Post-Divorce Adjustment",
+    title: "Divorce Transition Strategy & Stability",
     body: "Supporting clients as they establish new routines, communication patterns, and stability after divorce.",
   },
 ];
@@ -109,15 +109,22 @@ export default function Home() {
           <p className="mt-5 font-body text-sm font-light leading-relaxed text-ink md:text-base">
             Divorce requires clarity, emotional steadiness, and informed
             decision-making — especially when navigating mediation,
-            collaborative divorce, or litigation. I help clients understand
-            their legal-process options, prepare for high-stakes conversations,
-            and communicate with structure so they can participate effectively
-            and make decisions they can stand behind.
+            collaborative divorce, or litigation. I help clients clarify their
+            priorities, prepare informed questions, and evaluate
+            divorce-process pathways in partnership with their legal counsel.
           </p>
           <p className="mt-3 font-body text-sm font-light leading-relaxed text-ink md:mt-4 md:text-base">
             My work strengthens the entire professional team — especially
             attorneys — by reducing reactivity, improving communication, and
             supporting client readiness at every stage of the legal process.
+          </p>
+          <p className="mt-3 font-body text-sm font-light leading-relaxed text-ink md:mt-4 md:text-base">
+            Drawing on a career in organizational effectiveness, governance,
+            and strategic decision support, I help clients bring structure to
+            one of the most complex decision-making periods of their lives. My
+            approach combines divorce coaching with proven frameworks for
+            navigating uncertainty, evaluating options, and making informed
+            decisions aligned with long-term goals.
           </p>
         </div>
       </section>

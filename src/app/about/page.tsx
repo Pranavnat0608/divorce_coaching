@@ -186,6 +186,33 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why This Approach Is Different */}
+      <section className="bg-white py-14 md:py-16">
+        <div className="mx-auto max-w-3xl px-6 text-center md:max-w-4xl md:px-10">
+          <h2 className="font-display font-normal text-3xl tracking-tight text-plum md:text-4xl">
+            Why This Approach Is Different
+          </h2>
+          <div className="mt-5 space-y-4 font-body text-base font-light leading-relaxed text-ink md:text-lg">
+            <p>
+              Long before becoming a Certified Divorce Coach®, I spent my
+              career helping leaders and organizations navigate high-stakes
+              decisions, competing priorities, uncertainty, and change.
+            </p>
+            <p>
+              Drawing on a career in organizational effectiveness, governance,
+              and strategic decision support, I help clients bring structure to
+              one of the most complex decision-making periods of their lives.
+            </p>
+            <p>
+              The same principles used to support executive decision-making can
+              help individuals organize information, evaluate options,
+              communicate effectively, and move forward with confidence during
+              divorce.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why This Practice Exists */}
       <section className="bg-pink py-14 md:py-16">
         <div className="mx-auto max-w-3xl px-6 md:max-w-4xl md:px-10">

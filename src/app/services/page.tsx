@@ -6,7 +6,7 @@ import { katePinkBg } from "@/lib/katePinkBg";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Executive-caliber, trauma-informed decision support: legal-process clarity, mediation readiness, attorney engagement preparation, conflict de-escalation, and transition stability.",
+    "Executive-caliber, trauma-informed decision support: divorce decision readiness, attorney engagement preparation, mediation readiness, conflict de-escalation, and transition strategy.",
 };
 
 const legalProcessSupport = [
@@ -19,31 +19,20 @@ const legalProcessSupport = [
 
 const services = [
   {
-    name: "Legal-Process Clarity & Pathway Selection",
+    name: "Divorce Decision Readiness & Legal-Process Preparation",
     paragraphs: [
-      "Clients often struggle to understand their divorce process options — mediation, collaborative divorce, or litigation. Without clarity, decisions become reactive and costly.",
-      "This service provides a structured, calm environment to evaluate options, understand implications, and choose the path aligned with long-term goals.",
+      "Helping clients bring structure to the early stages of divorce by clarifying priorities, organizing information, identifying key questions, and preparing for informed conversations with legal counsel about available process options.",
     ],
-    listLabel: "You will receive:",
+    listLabel: "Clients receive support with:",
     items: [
-      "a clear breakdown of legal-process options",
-      "structured decision-support tools",
-      "alignment with attorney strategy",
-      "preparation for next-step conversations",
-    ],
-  },
-  {
-    name: "Mediation Readiness",
-    paragraphs: [
-      "Mediation is most effective when clients arrive prepared, steady, and clear about priorities. Unprepared clients escalate conflict, lose focus, and increase legal costs.",
-    ],
-    listLabel: "This service strengthens mediation outcomes by helping clients:",
-    items: [
-      "clarify goals and non-negotiables",
-      "anticipate difficult conversations",
-      "practice grounded communication",
-      "reduce emotional reactivity",
-      "enter mediation with a structured plan",
+      "Clarifying personal, family, and financial priorities",
+      "Identifying desired outcomes and areas of concern",
+      "Preparing questions for attorney consultations",
+      "Understanding the practical differences among common divorce pathways",
+      "Organizing information needed for legal discussions",
+      "Evaluating readiness for mediation, collaborative divorce, or litigation discussions",
+      "Reducing uncertainty and decision paralysis",
+      "Developing a structured plan for next steps",
     ],
   },
   {
@@ -63,6 +52,20 @@ const services = [
       "This reduces back-and-forth, improves efficiency, and strengthens legal strategy.",
   },
   {
+    name: "Mediation Readiness",
+    paragraphs: [
+      "Mediation is most effective when clients arrive prepared, steady, and clear about priorities. Unprepared clients escalate conflict, lose focus, and increase legal costs.",
+    ],
+    listLabel: "This service strengthens mediation outcomes by helping clients:",
+    items: [
+      "clarify goals and non-negotiables",
+      "anticipate difficult conversations",
+      "practice grounded communication",
+      "reduce emotional reactivity",
+      "enter mediation with a structured plan",
+    ],
+  },
+  {
     name: "Conflict De-Escalation & Communication Structure",
     paragraphs: [
       "High-conflict communication derails progress and increases emotional strain. This service helps clients communicate with clarity and steadiness during difficult moments.",
@@ -77,7 +80,7 @@ const services = [
     ],
   },
   {
-    name: "Transition Stability & Post-Divorce Adjustment",
+    name: "Divorce Transition Strategy & Stability",
     paragraphs: [
       "Major transitions — household changes, co-parenting shifts, new routines — can overwhelm even the most capable individuals. This service provides grounded support during and after the divorce process.",
     ],
